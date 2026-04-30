@@ -52,10 +52,20 @@ export default function Courses() {
               <p className={styles.courseSub}>{c.subtitle}</p>
               <p className={styles.courseDesc}>{c.desc}</p>
               <div className={styles.meta}>
-                <span>⏱ {c.duration}</span>
-                <span>👥 {c.people}</span>
+                <span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{display:'inline',marginRight:'4px',verticalAlign:'middle'}}>
+                    <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
+                  </svg>
+                  {c.duration}
+                </span>
+                <span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{display:'inline',marginRight:'4px',verticalAlign:'middle'}}>
+                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                  </svg>
+                  {c.people}
+                </span>
               </div>
-              <a href="#join" className={styles.btn}>立即報名</a>
+              <a href="#join" className={styles.btn}>我要體驗</a>
             </div>
           ))}
         </div>

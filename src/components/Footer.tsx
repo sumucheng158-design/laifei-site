@@ -17,7 +17,7 @@ export default function Footer() {
               <a href="#brand">品牌核心</a>
               <a href="#courses">免費體驗</a>
               <a href="#rules">參加條件</a>
-              <a href="#join">我要報名</a>
+              <a href="#join">我要體驗</a>
             </div>
             <div className={styles.linkGroup}>
               <h4>聯絡我們</h4>

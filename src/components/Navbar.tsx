@@ -1,5 +1,6 @@
 'use client'
 import { useState, useEffect } from 'react'
+import Image from 'next/image'
 import styles from './Navbar.module.css'
 
 export default function Navbar() {
@@ -16,7 +17,7 @@ export default function Navbar() {
     { href: '#brand', label: '品牌核心' },
     { href: '#courses', label: '免費體驗' },
     { href: '#rules', label: '參加條件' },
-    { href: '#join', label: '我要報名' },
+    { href: '#join', label: '我要體驗' },
   ]
 
   const handleClose = () => setMenuOpen(false)
@@ -41,8 +42,14 @@ export default function Navbar() {
       <header className={`${styles.header} ${scrolled ? styles.scrolled : ''}`}>
         <div className={styles.container}>
           <a href="#" className={styles.logo}>
-            <span className={styles.logoText}>LaIFEi</span>
-            <span className={styles.logoSub}>烹飪創意空間</span>
+            <Image
+              src="/logo.png"
+              alt="LaIFEi 烹飪創意空間"
+              width={160}
+              height={56}
+              className={styles.logoImage}
+              priority
+            />
           </a>
 
           <nav className={styles.desktopNav}>
