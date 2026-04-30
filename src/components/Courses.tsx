@@ -2,30 +2,23 @@ import styles from './Courses.module.css'
 
 const courses = [
   {
-    tag: '入門課',
-    title: '刀工基礎班',
-    subtitle: 'Knife Skills Fundamentals',
-    duration: '2小時',
-    people: '最多8人',
-    desc: '學習正確握刀姿勢與基本切割技法，掌握廚藝的第一步。',
+    tag: '開幕特別活動',
+    date: '6/20 FRI',
+    title: '港式料理專場',
+    subtitle: 'Cantonese Cuisine Experience',
+    duration: '3小時',
+    people: '最多12人',
+    desc: '深入探索粵菜精髓，從經典點心到招牌燒味，手把手學習叉燒、蝦餃、腸粉等傳統港式料理的製作技巧，感受廣式烹飪的細膩與層次。',
     highlight: true,
   },
   {
-    tag: '創意課',
-    title: '東西融合料理',
-    subtitle: 'Fusion Cuisine Workshop',
+    tag: '開幕特別活動',
+    date: '6/27 FRI',
+    title: '義式料理專場',
+    subtitle: 'Italian Cuisine Experience',
     duration: '3小時',
-    people: '最多8人',
-    desc: '探索東西方食材與調味的無限組合，打造獨一無二的創意料理。',
-    highlight: false,
-  },
-  {
-    tag: '甜點課',
-    title: '手工甜點入門',
-    subtitle: 'Artisan Dessert Basics',
-    duration: '2.5小時',
-    people: '最多10人',
-    desc: '從基礎甜點製作開始，學習烘焙的美妙世界。',
+    people: '最多12人',
+    desc: '親手製作新鮮義大利麵、學習道地義式醬料的調製方法，從拿坡里披薩到提拉米蘇，沉浸在南歐料理的浪漫滋味與職人精神。',
     highlight: false,
   },
 ]
@@ -36,18 +29,19 @@ export default function Courses() {
       <div className={styles.container}>
         <div className={styles.header}>
           <span className={styles.label}>FREE EXPERIENCE</span>
-          <h2 className={styles.title}>免費體驗課程</h2>
+          <h2 className={styles.title}>開幕前免費體驗專場</h2>
           <p className={styles.desc}>
-            開幕期間，我們提供三種精選免費體驗課程，讓您親身感受LaIFEi的魅力。
-            名額有限，立即報名！
+            LaIFEi 開幕倒數！特別規劃兩場限定免費體驗活動，帶您提前感受我們的廚藝空間。
+            名額有限，把握機會立即報名！
           </p>
         </div>
 
         <div className={styles.grid}>
           {courses.map((c, i) => (
             <div key={i} className={`${styles.card} ${c.highlight ? styles.highlighted : ''}`}>
-              {c.highlight && <div className={styles.badge}>最受歡迎</div>}
+              {c.highlight && <div className={styles.badge}>限定體驗</div>}
               <span className={styles.tag}>{c.tag}</span>
+              <div className={styles.dateTag}>{c.date}</div>
               <h3 className={styles.courseTitle}>{c.title}</h3>
               <p className={styles.courseSub}>{c.subtitle}</p>
               <p className={styles.courseDesc}>{c.desc}</p>

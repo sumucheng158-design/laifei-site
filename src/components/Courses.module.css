@@ -40,7 +40,9 @@
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  max-width: 900px;
+  margin: 0 auto;
   gap: 1.5rem;
 }
 
@@ -144,4 +146,11 @@
 
 .highlighted .btn:hover {
   background: var(--accent-light);
+}
+.dateTag {
+  font-size: 1.6rem;
+  font-weight: 900;
+  color: var(--accent);
+  letter-spacing: 0.05em;
+  margin: 0.25rem 0;
 }

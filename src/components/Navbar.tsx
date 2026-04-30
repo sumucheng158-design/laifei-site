@@ -45,8 +45,8 @@ export default function Navbar() {
             <Image
               src="/logo.png"
               alt="LaIFEi烹飪創意空間"
-              width={160}
-              height={56}
+              width={220}
+              height={78}
               className={styles.logoImage}
               priority
             />
