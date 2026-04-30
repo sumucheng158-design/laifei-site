@@ -11,7 +11,7 @@ export default function KitchenPhoto() {
         <div className={styles.imageWrap}>
           <Image
             src="/kitchen.jpeg"
-            alt="LaIFEi 烹飪創意空間"
+            alt="LaIFEi烹飪創意空間"
             fill
             className={styles.image}
             sizes="(max-width: 768px) 100vw, 1200px"

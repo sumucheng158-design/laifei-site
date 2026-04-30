@@ -8,7 +8,7 @@ export default function Join() {
           <span className={styles.label}>EXPERIENCE NOW</span>
           <h2 className={styles.title}>我要體驗</h2>
           <p className={styles.desc}>
-            立即預約免費體驗課程，親身感受 LaIFEi 的烹飪魅力。
+            立即預約免費體驗課程，親身感受LaIFEi的烹飪魅力。
             名額有限，把握開幕優惠！
           </p>
         </div>
@@ -40,7 +40,7 @@ export default function Join() {
               </div>
               <div>
                 <strong>小班精緻教學</strong>
-                <span>最多 8–10 人</span>
+                <span>最多8–10人</span>
               </div>
             </div>
             <div className={styles.feature}>
@@ -69,7 +69,7 @@ export default function Join() {
             </svg>
           </a>
 
-          <p className={styles.note}>點擊後將前往 Google 表單填寫報名資料</p>
+          <p className={styles.note}></p>
         </div>
       </div>
     </section>

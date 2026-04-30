@@ -29,7 +29,7 @@ export default function Footer() {
         </div>
 
         <div className={styles.bottom}>
-          <p>© 2024 LaIFEi 烹飪創意空間. All rights reserved.</p>
+          <p>©2026 LaIFEi 烹飪創意空間. All rights reserved.</p>
         </div>
       </div>
     </footer>
