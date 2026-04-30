@@ -18,7 +18,7 @@ export default function Hero() {
       <div className={styles.overlay} />
 
       <div className={styles.content}>
-        <div className={styles.badge}>7月1日 台中西屯店盛大開幕</div>
+        <div className={styles.badge}>7月1日 台中西屯店 盛大開幕</div>
         <h1 className={styles.title}>
           <span className={styles.titleEn}>LaIFEi</span>
           <span className={styles.titleZh}>烹飪創意空間</span>
