@@ -65,7 +65,6 @@ export default function Courses() {
                   {c.people}
                 </span>
               </div>
-              <a href="#join" className={styles.btn}>我要體驗</a>
             </div>
           ))}
         </div>
