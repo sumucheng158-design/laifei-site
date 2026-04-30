@@ -44,7 +44,7 @@ export default function Navbar() {
           <a href="#" className={styles.logo}>
             <Image
               src="/logo.png"
-              alt="LaIFEi 烹飪創意空間"
+              alt="LaIFEi烹飪創意空間"
               width={160}
               height={56}
               className={styles.logoImage}

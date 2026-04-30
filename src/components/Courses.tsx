@@ -38,7 +38,7 @@ export default function Courses() {
           <span className={styles.label}>FREE EXPERIENCE</span>
           <h2 className={styles.title}>免費體驗課程</h2>
           <p className={styles.desc}>
-            開幕期間，我們提供三種精選免費體驗課程，讓您親身感受 LaIFEi 的魅力。
+            開幕期間，我們提供三種精選免費體驗課程，讓您親身感受LaIFEi的魅力。
             名額有限，立即報名！
           </p>
         </div>
