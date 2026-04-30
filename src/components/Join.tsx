@@ -20,8 +20,7 @@ export default function Join() {
             <div className={styles.feature}>
               <div className={styles.featureIcon}>
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-                  <circle cx="12" cy="12" r="10"/>
-                  <polyline points="12 6 12 12 16 14"/>
+                  <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
                 </svg>
               </div>
               <div>
@@ -40,7 +39,7 @@ export default function Join() {
               </div>
               <div>
                 <strong>小班精緻教學</strong>
-                <span>最多8–10人</span>
+                <span>每堂最多 12 人</span>
               </div>
             </div>
             <div className={styles.feature}>
@@ -69,7 +68,7 @@ export default function Join() {
             </svg>
           </a>
 
-          <p className={styles.note}></p>
+          <p className={styles.note}>報名成功後將收到 Email 確認通知，請確認信箱是否正確。</p>
         </div>
       </div>
     </section>

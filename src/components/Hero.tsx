@@ -1,9 +1,20 @@
+import Image from 'next/image'
 import styles from './Hero.module.css'
 
 export default function Hero() {
   return (
     <section className={styles.hero}>
-      <div className={styles.bg} />
+      {/* Real kitchen background image */}
+      <div className={styles.bgImage}>
+        <Image
+          src="/kitchen.webp"
+          alt=""
+          fill
+          priority
+          sizes="100vw"
+          className={styles.bgImg}
+        />
+      </div>
       <div className={styles.overlay} />
 
       <div className={styles.content}>

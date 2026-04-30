@@ -1,5 +1,5 @@
 'use client'
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useCallback } from 'react'
 import Image from 'next/image'
 import styles from './Navbar.module.css'
 
@@ -7,11 +7,24 @@ export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
 
-  useEffect(() => {
-    const handleScroll = () => setScrolled(window.scrollY > 50)
-    window.addEventListener('scroll', handleScroll)
-    return () => window.removeEventListener('scroll', handleScroll)
+  const handleScroll = useCallback(() => {
+    setScrolled(window.scrollY > 50)
   }, [])
+
+  useEffect(() => {
+    let ticking = false
+    const onScroll = () => {
+      if (!ticking) {
+        requestAnimationFrame(() => {
+          handleScroll()
+          ticking = false
+        })
+        ticking = true
+      }
+    }
+    window.addEventListener('scroll', onScroll, { passive: true })
+    return () => window.removeEventListener('scroll', onScroll)
+  }, [handleScroll])
 
   const navLinks = [
     { href: '#brand', label: '品牌核心' },
@@ -27,7 +40,7 @@ export default function Navbar() {
       {menuOpen && (
         <div className={styles.overlay} onClick={handleClose}>
           <div className={styles.mobileMenu} onClick={e => e.stopPropagation()}>
-            <button className={styles.closeBtn} onClick={handleClose}>✕</button>
+            <button className={styles.closeBtn} onClick={handleClose} aria-label="關閉選單">✕</button>
             <nav>
               {navLinks.map(link => (
                 <a key={link.href} href={link.href} className={styles.mobileLink} onClick={handleClose}>
@@ -43,10 +56,10 @@ export default function Navbar() {
         <div className={styles.container}>
           <a href="#" className={styles.logo}>
             <Image
-              src="/logo.png"
+              src="/logo.webp"
               alt="LaIFEi烹飪創意空間"
-              width={220}
-              height={78}
+              width={120}
+              height={43}
               className={styles.logoImage}
               priority
             />

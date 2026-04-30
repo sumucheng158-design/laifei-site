@@ -51,12 +51,19 @@
   border: 1px solid var(--border);
   border-radius: 12px;
   padding: 2.5rem 2rem;
-  transition: border-color 0.3s, transform 0.3s;
+  transition: border-color 0.3s, transform 0.3s, box-shadow 0.3s;
 }
 
 .card:hover {
   border-color: var(--accent);
   transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(200, 169, 110, 0.12);
+}
+
+@media (max-width: 540px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 .icon {

@@ -53,11 +53,18 @@
   background: var(--bg-card);
   border: 1px solid var(--border);
   border-radius: 12px;
-  transition: border-color 0.3s;
+  transition: border-color 0.3s, box-shadow 0.3s;
 }
 
 .item:hover {
   border-color: rgba(200, 169, 110, 0.4);
+  box-shadow: 0 8px 24px rgba(200, 169, 110, 0.08);
+}
+
+@media (max-width: 600px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 .num {

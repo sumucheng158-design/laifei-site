@@ -8,18 +8,24 @@
   overflow: hidden;
 }
 
-.bg {
+/* Real background image */
+.bgImage {
   position: absolute;
   inset: 0;
-  background: radial-gradient(ellipse at center, #1a1208 0%, #0a0a0a 70%);
+}
+
+.bgImg {
+  object-fit: cover;
+  object-position: center;
 }
 
 .overlay {
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(circle at 20% 50%, rgba(200, 169, 110, 0.08) 0%, transparent 50%),
-    radial-gradient(circle at 80% 20%, rgba(200, 169, 110, 0.05) 0%, transparent 40%);
+    linear-gradient(to bottom, rgba(10,10,10,0.55) 0%, rgba(10,10,10,0.75) 100%),
+    radial-gradient(circle at 20% 50%, rgba(200, 169, 110, 0.12) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(200, 169, 110, 0.08) 0%, transparent 40%);
 }
 
 .content {
@@ -29,6 +35,7 @@
   max-width: 700px;
 }
 
+/* No animation-fill-mode: both — content is visible immediately, then fades in */
 .badge {
   display: inline-block;
   padding: 0.4rem 1.2rem;
@@ -38,7 +45,7 @@
   color: var(--accent);
   letter-spacing: 0.15em;
   margin-bottom: 2rem;
-  animation: fadeIn 1s ease forwards;
+  animation: fadeIn 0.8s ease forwards;
 }
 
 .title {
@@ -54,7 +61,7 @@
   color: var(--accent);
   letter-spacing: 0.05em;
   line-height: 1;
-  animation: slideUp 1s ease 0.2s both;
+  animation: slideUp 0.8s ease 0.15s forwards;
 }
 
 .titleZh {
@@ -62,7 +69,7 @@
   font-weight: 300;
   color: var(--text-primary);
   letter-spacing: 0.4em;
-  animation: slideUp 1s ease 0.4s both;
+  animation: slideUp 0.8s ease 0.3s forwards;
 }
 
 .subtitle {
@@ -71,7 +78,7 @@
   line-height: 1.9;
   letter-spacing: 0.1em;
   margin-bottom: 3rem;
-  animation: slideUp 1s ease 0.6s both;
+  animation: slideUp 0.8s ease 0.45s forwards;
 }
 
 .actions {
@@ -79,7 +86,7 @@
   gap: 1rem;
   justify-content: center;
   flex-wrap: wrap;
-  animation: slideUp 1s ease 0.8s both;
+  animation: slideUp 0.8s ease 0.6s forwards;
 }
 
 .btnPrimary {
@@ -90,12 +97,13 @@
   font-size: 0.9rem;
   letter-spacing: 0.1em;
   border-radius: 4px;
-  transition: background 0.3s, transform 0.2s;
+  transition: background 0.3s, transform 0.2s, box-shadow 0.3s;
 }
 
 .btnPrimary:hover {
   background: var(--accent-light);
   transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(200, 169, 110, 0.35);
 }
 
 .btnSecondary {
@@ -125,7 +133,7 @@
   color: var(--text-muted);
   font-size: 0.7rem;
   letter-spacing: 0.1em;
-  animation: fadeIn 2s ease 1.5s both;
+  animation: fadeIn 1s ease 1s forwards;
 }
 
 .scrollHint span {
@@ -142,11 +150,24 @@
 }
 
 @keyframes slideUp {
-  from { opacity: 0; transform: translateY(30px); }
+  from { opacity: 0; transform: translateY(24px); }
   to { opacity: 1; transform: translateY(0); }
 }
 
 @keyframes scrollLine {
   0%, 100% { opacity: 0; transform: scaleY(0.5); }
   50% { opacity: 1; transform: scaleY(1); }
+}
+
+@media (max-width: 480px) {
+  .actions {
+    flex-direction: column;
+    align-items: center;
+  }
+  .btnPrimary,
+  .btnSecondary {
+    width: 100%;
+    max-width: 280px;
+    text-align: center;
+  }
 }
