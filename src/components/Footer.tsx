@@ -8,7 +8,7 @@ export default function Footer() {
           <div className={styles.brand}>
             <span className={styles.logo}>LaIFEi</span>
             <p className={styles.tagline}>烹飪創意空間</p>
-            <p className={styles.openDate}>7月1日 盛大開幕</p>
+            <p className={styles.openDate}>7月1日 台中西屯店盛大開幕</p>
           </div>
 
           <div className={styles.links}>

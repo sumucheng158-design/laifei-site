@@ -39,7 +39,7 @@ export default function Join() {
               </div>
               <div>
                 <strong>小班精緻教學</strong>
-                <span>每堂最多 12 人</span>
+                <span>每堂最多12人</span>
               </div>
             </div>
             <div className={styles.feature}>
@@ -68,7 +68,7 @@ export default function Join() {
             </svg>
           </a>
 
-          <p className={styles.note}>報名成功後將收到 Email 確認通知，請確認信箱是否正確。</p>
+          <p className={styles.note}>報名成功後將收到Email確認通知，請確認信箱是否正確。</p>
         </div>
       </div>
     </section>
