@@ -34,8 +34,8 @@ export default function Hero() {
       </div>
 
       <div className={styles.scrollHint}>
-        <span />
         <p>向下滾動</p>
+        <span />
       </div>
     </section>
   )

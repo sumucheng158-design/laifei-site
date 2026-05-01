@@ -21,7 +21,7 @@ export default function Footer() {
             </div>
             <div className={styles.linkGroup}>
               <h4>聯絡我們</h4>
-              <a href="mailto:hello@laifei.com">VelourNoir.0415@gmail.com</a>
+              <a href="mailto:VelourNoir.0415@gmail.com">VelourNoir.0415@gmail.com</a>
               <span>週一至週日10:00–20:00</span>
             </div>
           </div>

@@ -90,6 +90,7 @@
   z-index: 200;
   display: flex;
   justify-content: flex-end;
+  animation: fadeOverlay 0.25s ease forwards;
 }
 
 .mobileMenu {
@@ -99,6 +100,17 @@
   display: flex;
   flex-direction: column;
   gap: 2rem;
+  animation: slideInMenu 0.28s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes fadeOverlay {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideInMenu {
+  from { transform: translateX(100%); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
 }
 
 .closeBtn {

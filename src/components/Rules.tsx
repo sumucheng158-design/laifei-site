@@ -1,13 +1,5 @@
+import { rules } from '@/data/rules'
 import styles from './Rules.module.css'
-
-const rules = [
-  { num: '01', title: '年齡限制', desc: '參加者須年滿16歲以上，18歲以下需有家長陪同或書面同意書。' },
-  { num: '02', title: '健康聲明', desc: '請事先告知任何食物過敏或飲食限制，以確保您的安全與體驗品質。' },
-  { num: '03', title: '提前到場', desc: '課程開始前15分鐘請到場完成報到，逾時恕不候補。' },
-  { num: '04', title: '穿著建議', desc: '建議穿著舒適且不怕弄髒的衣物，我們提供圍裙，但請自備防滑鞋。' },
-  { num: '05', title: '名額限制', desc: '每堂課程名額有限（最多12人），報名確認後如需取消請提前48小時告知。' },
-  { num: '06', title: '個人設備', desc: '所有廚具及食材均由LaIFEi提供，學員無需自備任何器材。' },
-]
 
 export default function Rules() {
   return (

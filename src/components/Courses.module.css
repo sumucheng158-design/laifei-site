@@ -46,9 +46,10 @@
   gap: 1.5rem;
 }
 
+/* Base card — both cards share gold border + gradient bg */
 .card {
-  background: var(--bg-card);
-  border: 1px solid var(--border);
+  border: 1px solid var(--accent);
+  background: linear-gradient(135deg, #1a1508, #0a0a0a);
   border-radius: 16px;
   padding: 2.5rem;
   position: relative;
@@ -58,7 +59,23 @@
   transition: border-color 0.3s, transform 0.3s, box-shadow 0.3s;
 }
 
-.card:hover {
+/* Primary card — stronger glow to distinguish first from second */
+.cardPrimary {
+  border-width: 1.5px;
+  box-shadow: 0 0 24px rgba(200, 169, 110, 0.15);
+}
+
+.cardPrimary:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 40px rgba(200, 169, 110, 0.22);
+}
+
+/* Secondary card — subtle glow */
+.cardSecondary {
+  box-shadow: 0 0 12px rgba(200, 169, 110, 0.06);
+}
+
+.cardSecondary:hover {
   transform: translateY(-4px);
   box-shadow: 0 12px 32px rgba(200, 169, 110, 0.12);
 }
@@ -69,11 +86,7 @@
   }
 }
 
-.highlighted {
-  border-color: var(--accent);
-  background: linear-gradient(135deg, #1a1508, #0a0a0a);
-}
-
+/* Badge — both cards show it */
 .badge {
   position: absolute;
   top: -12px;
@@ -98,6 +111,14 @@
   padding: 0.25rem 0.75rem;
   border-radius: 4px;
   width: fit-content;
+}
+
+.dateTag {
+  font-size: 1.6rem;
+  font-weight: 900;
+  color: var(--accent);
+  letter-spacing: 0.05em;
+  margin: 0.25rem 0;
 }
 
 .courseTitle {
@@ -128,6 +149,7 @@
   color: var(--text-muted);
 }
 
+/* CTA button — secondary style by default */
 .btn {
   display: block;
   text-align: center;
@@ -142,22 +164,15 @@
 }
 
 .btn:hover {
+  background: rgba(200, 169, 110, 0.12);
+}
+
+/* Primary card button — filled */
+.btnPrimary {
   background: var(--accent);
   color: #0a0a0a;
 }
 
-.highlighted .btn {
-  background: var(--accent);
-  color: #0a0a0a;
-}
-
-.highlighted .btn:hover {
+.btnPrimary:hover {
   background: var(--accent-light);
-}
-.dateTag {
-  font-size: 1.6rem;
-  font-weight: 900;
-  color: var(--accent);
-  letter-spacing: 0.05em;
-  margin: 0.25rem 0;
 }

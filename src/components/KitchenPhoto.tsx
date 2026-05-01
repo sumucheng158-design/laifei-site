@@ -10,7 +10,7 @@ export default function KitchenPhoto() {
         </div>
         <div className={styles.imageWrap}>
           <Image
-            src="/kitchen.jpeg"
+            src="/kitchen.webp"
             alt="LaIFEi烹飪創意空間"
             fill
             className={styles.image}
