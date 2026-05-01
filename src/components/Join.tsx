@@ -14,8 +14,8 @@ export default function Join() {
             <h3 className={styles.modalTitle}>報名前請確認</h3>
             <ul className={styles.modalList}>
               <li>✓ 本次體驗課程完全免費，開幕限定</li>
-              <li>✓ 每堂名額最多 12 人，額滿即止</li>
-              <li>✓ 請提前 15 分鐘到場報到</li>
+              <li>✓ 每堂名額最多12人，額滿即止</li>
+              <li>✓ 請提前15分鐘到場報到</li>
               <li>✓ 請告知食物過敏或飲食限制</li>
               <li>✓ 報名成功後將收到 Email 確認通知</li>
             </ul>

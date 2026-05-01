@@ -1,7 +1,7 @@
 export const courses = [
   {
     tag: '開幕特別活動',
-    date: '6/20 FRI',
+    date: '6/20 SAT',
     title: '港式料理專場',
     subtitle: 'Cantonese Cuisine Experience',
     duration: '3小時',
@@ -11,7 +11,7 @@ export const courses = [
   },
   {
     tag: '開幕特別活動',
-    date: '6/27 FRI',
+    date: '6/27 SAT',
     title: '義式料理專場',
     subtitle: 'Italian Cuisine Experience',
     duration: '3小時',

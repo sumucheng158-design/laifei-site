@@ -9,7 +9,7 @@ export default function Courses() {
           <span className={styles.label}>FREE EXPERIENCE</span>
           <h2 className={styles.title}>開幕前免費體驗專場</h2>
           <p className={styles.desc}>
-            LaIFEi 開幕倒數！特別規劃兩場限定免費體驗活動，帶您提前感受我們的廚藝空間。
+            LaIFEi開幕倒數！特別規劃兩場限定免費體驗活動，帶您提前感受我們的廚藝空間。
             名額有限，把握機會立即報名！
           </p>
         </div>

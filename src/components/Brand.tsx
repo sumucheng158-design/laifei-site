@@ -9,7 +9,7 @@ export default function Brand() {
           <span className={styles.label}>BRAND CORE</span>
           <h2 className={styles.title}>品牌核心</h2>
           <p className={styles.desc}>
-            LaIFEi 相信，料理不只是填飽肚子，更是一種生活藝術與自我表達的方式。
+            LaIFEi相信，料理不只是填飽肚子，更是一種生活藝術與自我表達的方式。
             我們致力於打造一個充滿創意與溫度的烹飪空間，讓每個人都能找到屬於自己的料理語言。
           </p>
         </div>
